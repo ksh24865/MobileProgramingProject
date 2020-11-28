@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location">
+        <item>동작구</item>
+        <item>강동구</item>
+        <item>강남구</item>
+        <item>구로구</item>
+        <item>서초구</item>
+    </string-array>
+</resources>
