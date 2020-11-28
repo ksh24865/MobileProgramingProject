@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sensor">
+        <item>기온</item>
+        <item>습도</item>
+        <item>미세먼지</item>
+        <item>초미세먼지</item>
+    </string-array>
+</resources>
