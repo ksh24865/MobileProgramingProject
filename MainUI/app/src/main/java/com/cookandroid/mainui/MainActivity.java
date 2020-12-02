@@ -22,13 +22,18 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLConnection;
@@ -93,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
     public static HashMap<Region, Node>updateMap(){
         JSONArray ja = null;
         Log.d("log: ","templog0");
