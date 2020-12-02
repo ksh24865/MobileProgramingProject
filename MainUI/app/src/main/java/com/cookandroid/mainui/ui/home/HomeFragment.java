@@ -12,6 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+
+import com.cookandroid.mainui.MainActivity;
+import com.cookandroid.mainui.Node;
 import com.cookandroid.mainui.R;
 
 public class HomeFragment extends Fragment {
@@ -33,13 +36,14 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
+                Node now = MainActivity.NowRegion;
                 text_home.setText("홈 화면");
-                text_region.setText("현재 위치");
-                text_temper.setText("온도 입력");
-                text_dust.setText("미세먼지 수치 입력");
-                text_ddust.setText("초미세먼지 수치 입력");
-                text_humid.setText("습도 입력");
-                text_time.setText("정보 가져온 시간 입력");
+                text_region.setText(now.Region);
+                text_temper.setText(Double.toString(now.Temper)+"℃");
+                text_dust.setText(Integer.toString(now.Dust)+"㎍/m³");
+                text_ddust.setText(Integer.toString(now.Ddust)+"㎍/m³");
+                text_humid.setText(Integer.toString(now.Humid)+"%");
+                text_time.setText(now.Time);
             }
         });
         return root;
