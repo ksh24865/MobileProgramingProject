@@ -35,7 +35,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Array;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.lang.Object;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         thread.start();
-
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -170,6 +173,4 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("-송파구-\n기온: " + node6.temper+"\n습도: "+ node6.humid+"\n미세먼지: "+node6.dust + "\n초미세먼지: "+ node6.ddust + "\n기준시각: " + node6.time);
 
     }
-}
-
 }

@@ -1,10 +1,6 @@
 package com.cookandroid.mainui;
 
-import java.util.ArrayList;
-import com.cookandroid.mainui.EventClass;
-
 public class Node {
-    // 등록된 이벤트 목록
     Region region;
     double temper;
     int dust;
