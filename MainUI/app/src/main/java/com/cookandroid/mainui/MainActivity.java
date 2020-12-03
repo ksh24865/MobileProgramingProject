@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         NowRegion = NodeMap.get(Now);
         */
-        NowRegion = new Node(Now,4.2,31,18,27,"2020/12/03"); //임시 현재위치;
+        NowRegion = new Node(Now,1.2,31,18,10,"2020-12-03T13:52:32"); //임시 현재위치;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
