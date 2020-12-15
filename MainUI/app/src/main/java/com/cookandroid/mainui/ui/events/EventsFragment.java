@@ -23,8 +23,8 @@ import com.cookandroid.mainui.R;
 public class EventsFragment extends Fragment {
 
     private EventsViewModel eventsViewModel;
-    private ListView listview;
-    private ListViewAdapter adapter;
+    public static ListView listview;
+    public static ListViewAdapter adapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class EventsFragment extends Fragment {
         adapter = new ListViewAdapter(MyStruct.eventList);
         listview = (ListView)root.findViewById(R.id.listView);
         listview.setAdapter(adapter);
+
         return root;
     }
 }

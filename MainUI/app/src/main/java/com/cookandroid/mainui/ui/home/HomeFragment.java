@@ -81,6 +81,7 @@ public class HomeFragment extends Fragment {
                             MainActivity.latitude, MainActivity.longitude, 1
                     );
                     Log.d(this.getClass().getName(), mResultList.get(0).getAddressLine(0));
+                    Toast.makeText(getContext(),""+mResultList.get(0).getAddressLine(0), Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.d(this.getClass().getName(),"onComplete: 변환실패");

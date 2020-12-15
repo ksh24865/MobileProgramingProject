@@ -1,16 +1,22 @@
 package com.cookandroid.mainui.ui.events;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cookandroid.mainui.EventClass;
+import com.cookandroid.mainui.MainActivity;
 import com.cookandroid.mainui.R;
+import com.cookandroid.mainui.ui.home.HomeFragment;
+import com.cookandroid.mainui.ui.home.HomeViewModel;
 
 import java.util.ArrayList;
 
@@ -46,11 +52,32 @@ public class ListViewAdapter extends BaseAdapter {
         TextView descTextView = (TextView) convertView.findViewById(R.id.textView2);
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-        EventClass listViewItem = listViewItemList.get(position);
+        final EventClass listViewItem = listViewItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
         titleTextView.setText(listViewItem.getLocation());
         descTextView.setText(listViewItem.getSensor());
+
+        LinearLayout cmdArea= (LinearLayout)convertView.findViewById(R.id.cmdArea);
+        cmdArea.setOnClickListener(new View.OnClickListener() {
+            //해당 리스트 클릭시 이벤
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("" + listViewItem.getLocation() + "에 대한 로직");
+                builder.setMessage("센서 종류: "+listViewItem.sensor+ "\n\n로직: "+listViewItem.min+" < sensor_value < "+listViewItem.max + "\n ");
+                builder.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                listViewItemList.remove(listViewItem);
+                                EventsFragment.listview.setAdapter(EventsFragment.adapter);
+                            }
+                        }
+                );
+                builder.setNegativeButton("닫기", null);
+                builder.create().show();
+            }
+        });
 
         return convertView;
     }
