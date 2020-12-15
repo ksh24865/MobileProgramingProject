@@ -6,6 +6,7 @@ public class EventClass implements Cloneable{
     public double min;
     public double max;
     public double time;
+    public int timer;
 
     public EventClass() {
         location = "";

@@ -3,12 +3,12 @@ package com.cookandroid.mainui;
 public class Node {
     Region region;
     double temper;
-    int dust;
-    int ddust;
-    int humid;
+    double dust;
+    double ddust;
+    double humid;
     String time;
 
-    public Node(Region Region, double Temper,int Dust,int Ddust,int Humid,String Time){
+    public Node(Region Region, double Temper,double Dust,double Ddust,double Humid,String Time){
         region=Region;
         temper = Temper;
         dust = Dust;
