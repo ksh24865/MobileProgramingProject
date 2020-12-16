@@ -35,10 +35,11 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="72dp"
+                android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/location" />
+                android:text="@string/location"
+                android:textSize="8pt" />
             <Spinner
                 android:id="@+id/location"
                 android:entries="@array/location"
@@ -55,10 +56,11 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="72dp"
+                android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/sensor" />
+                android:text="@string/sensor"
+                android:textSize="8pt" />
             <Spinner
                 android:id="@+id/sensor"
                 android:entries="@array/sensor"
@@ -67,7 +69,118 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
+        <!-- 임계치 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/seekbar0Text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="임계치(min) : "
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/seekbar0val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/seekbar0Text"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="0 이상"
+                        android:textSize="8pt" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar0"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seekbar0val"
+                    android:max="40"
+                    android:min="-40"></SeekBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/seekbar1Text"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="임계치(max) : "
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/seekbar1val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/seekbar0Text"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="0 이하"
+                        android:textSize="8pt" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar1"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:max="40"
+                    android:min="-40"
+                    android:layout_below="@id/seekbar1val">
+                </SeekBar>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- action -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="103dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="액션"
+                android:textSize="8pt" />
+            <Spinner
+                android:id="@+id/action"
+                android:entries="@array/action"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Button -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,5 +193,7 @@
                 android:layout_height="wrap_content"
                 android:text="이벤트 등록" />
         </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

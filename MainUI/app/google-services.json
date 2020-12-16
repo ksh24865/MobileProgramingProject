@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "728251377969",
+    "project_id": "mainui-90ffd",
+    "storage_bucket": "mainui-90ffd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728251377969:android:8c387d76ab0e105f90a810",
+        "android_client_info": {
+          "package_name": "com.cookandroid.mainui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728251377969-72ao86ib466868t87u3d3lagckt0jj65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHUXvKQVXHX3eeK1dXFywdjtcQus-O-_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728251377969-72ao86ib466868t87u3d3lagckt0jj65.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
