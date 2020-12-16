@@ -16,4 +16,22 @@ public class Node {
         humid = Humid;
         time = Time;
     }
+    public Region getRegion() {
+        return region;
+    }
+    public double getTemper() {
+        return temper;
+    }
+    public double getDust() {
+        return dust;
+    }
+    public double getDdust() {
+        return ddust;
+    }
+    public double getHumid() {
+        return humid;
+    }
+    public String getTime() {
+        return time;
+    }
 }

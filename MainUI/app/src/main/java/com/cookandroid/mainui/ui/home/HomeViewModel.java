@@ -10,7 +10,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("현재 위치 : 동작구"); // 현재 위치 넣어야 함.
+        //mText.setValue("현재 위치 : 동작구"); // 현재 위치 넣어야 함.
     }
 
     public LiveData<String> getText() {

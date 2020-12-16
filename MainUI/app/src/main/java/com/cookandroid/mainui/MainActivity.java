@@ -60,12 +60,12 @@ import java.util.Iterator;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static Node node1;
-    public static Node node2;
-    public static Node node3;
-    public static Node node4;
-    public static Node node5;
-    public static Node node6;
+    public static Node node1 = new Node(Region.DONGJAK, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node2 = new Node(Region.GANGDONG, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node3 = new Node(Region.GANGNAM, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node4 = new Node(Region.GURO, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node5 = new Node(Region.SEOCHO, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node6 = new Node(Region.SONGPA, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
 
     public static GpsTracker gpsTracker;
     public static double latitude;
@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
                 while (true) {
                     Log.d("Thread", "running");
                     //node1 = NodeMap.get(Region.DONGJAK);              //어떤 지역의 현재 노드 정보를 가져옴.
-                    node1 = new Node(Region.DONGJAK, 0.0, 0.0, 0.0, 0.0, "");
                     double sensorval=0.0;
                     int idx=0;
                     for(EventClass i : MyStruct.eventList) { //for문을 통한 전체출력

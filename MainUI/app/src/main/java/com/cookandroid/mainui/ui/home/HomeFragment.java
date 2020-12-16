@@ -29,6 +29,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.cookandroid.mainui.GpsTracker;
 import com.cookandroid.mainui.MainActivity;
+import com.cookandroid.mainui.Node;
 import com.cookandroid.mainui.R;
 
 import java.io.IOException;
@@ -39,7 +40,7 @@ import static android.content.Context.LOCATION_SERVICE;
 
 public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
-
+    private Node visual_node;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -57,12 +58,12 @@ public class HomeFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 text_home.setText("홈 화면");
-                text_region.setText("동작구");
-                text_temper.setText("4.2");
-                text_dust.setText("0.0");
-                text_ddust.setText("0.0");
-                text_humid.setText("27");
-                text_time.setText("2020/12/03");
+                text_region.setText(""+MainActivity.node1.getRegion());
+                text_temper.setText(""+MainActivity.node1.getTemper());
+                text_dust.setText(""+MainActivity.node1.getDust());
+                text_ddust.setText(""+MainActivity.node1.getDdust());
+                text_humid.setText(""+MainActivity.node1.getHumid());
+                text_time.setText(""+MainActivity.node1.getTime());
             }
         });
         Button ShowLocationButton = (Button) root.findViewById(R.id.gpsButton);
@@ -81,13 +82,50 @@ public class HomeFragment extends Fragment {
                             MainActivity.latitude, MainActivity.longitude, 1
                     );
                     Log.d(this.getClass().getName(), mResultList.get(0).getAddressLine(0));
-                    Toast.makeText(getContext(),""+mResultList.get(0).getAddressLine(0), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(),""+mResultList.get(0).getAddressLine(0), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(),"현재위치: 동작구로 업데이트했습니다.", Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.d(this.getClass().getName(),"onComplete: 변환실패");
                 }
+                // 시각화 업데이트
+                text_region.setText("동작구");
+                text_temper.setText(""+MainActivity.node1.getTemper());
+                text_dust.setText(""+MainActivity.node1.getDust());
+                text_ddust.setText(""+MainActivity.node1.getDdust());
+                text_humid.setText(""+MainActivity.node1.getHumid());
+                text_time.setText(""+MainActivity.node1.getTime());
             }
         });
+
+        //-------------------지역별 버튼---------------------
+        // 1. 동작구
+        Button home_node1= (Button) root.findViewById(R.id.home_node1);
+        home_node1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                text_region.setText("동작구");
+                text_temper.setText(""+MainActivity.node1.getTemper());
+                text_dust.setText(""+MainActivity.node1.getDust());
+                text_ddust.setText(""+MainActivity.node1.getDdust());
+                text_humid.setText(""+MainActivity.node1.getHumid());
+                text_time.setText(""+MainActivity.node1.getTime());
+            }
+        });
+        // 2. 강동구
+        Button home_node2= (Button) root.findViewById(R.id.home_node2);
+        home_node2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                text_region.setText("강동구");
+                text_temper.setText(""+MainActivity.node2.getTemper());
+                text_dust.setText(""+MainActivity.node2.getDust());
+                text_ddust.setText(""+MainActivity.node2.getDdust());
+                text_humid.setText(""+MainActivity.node2.getHumid());
+                text_time.setText(""+MainActivity.node2.getTime());
+            }
+        });
+
         return root;
     }
 }
