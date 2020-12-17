@@ -28,4 +28,4 @@
     ![arlam_last 2020-12-17 19-32](https://user-images.githubusercontent.com/55729930/102477022-2a626000-409f-11eb-8134-7130d0c1ccbf.gif)
     
 ## Detail
-[발표자료.pdf](https://github.com/seongheum-ssu/2020-2-2150686801/blob/main/projects/02-04-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%20IoT%20%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98%20%EB%AA%A8%EB%B0%94%EC%9D%BC%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A0%9C%EA%B3%B5%EC%9D%84%20%EC%9C%84%ED%95%9C%20%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.pdf)
+* [발표자료](https://github.com/seongheum-ssu/2020-2-2150686801/blob/main/projects/02-04-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%20IoT%20%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98%20%EB%AA%A8%EB%B0%94%EC%9D%BC%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%A0%9C%EA%B3%B5%EC%9D%84%20%EC%9C%84%ED%95%9C%20%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.pdf)
