@@ -60,9 +60,9 @@ import java.util.Iterator;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static Node node1 = new Node(Region.DONGJAK, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
-    public static Node node2 = new Node(Region.GANGDONG, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
-    public static Node node3 = new Node(Region.GANGNAM, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
+    public static Node node1 = new Node(Region.DONGJAK, -1.8, 28.0, 19.0, 54.2, "2020-12-16");
+    public static Node node2 = new Node(Region.GANGDONG, -2.1, 25.0, 16.0, 51.7, "2020-12-16");
+    public static Node node3 = new Node(Region.GANGNAM, -1.3, 24.0, 13.0, 50.4, "2020-12-16");
     public static Node node4 = new Node(Region.GURO, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
     public static Node node5 = new Node(Region.SEOCHO, 0.0, 0.0, 0.0, 0.0, "2020-12-16");
     public static Node node6 = new Node(Region.SONGPA, 0.0, 0.0, 0.0, 0.0, "2020-12-16");

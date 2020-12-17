@@ -39,7 +39,7 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/location" />
@@ -59,7 +59,7 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="99dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="온도" />
@@ -79,7 +79,7 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="99dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="미세먼지" />
@@ -99,7 +99,7 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="99dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="초미세먼지" />
@@ -119,7 +119,7 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="99dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="습도" />
@@ -139,10 +139,10 @@
             android:padding="10dp">
 
             <TextView
-                android:layout_width="98dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="시간" />
+                android:text="날짜" />
 
             <TextView
                 android:id="@+id/home_time"
@@ -166,24 +166,45 @@
                 android:text="현재위치 업데이트"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <AbsoluteLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="1dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-            <Button
-                android:id="@+id/home_node1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="동작구"/>
-            <Button
-                android:id="@+id/home_node2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="강동구"/>
-        </LinearLayout>
+            android:src="@drawable/map" />
+
+        <Button
+            android:id="@+id/home_node2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:layout_x="195dp"
+            android:layout_y="160dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/home_node1"
+            android:layout_width="wrap_content"
+            android:background="#00ff0000"
+            android:layout_height="wrap_content"
+            android:layout_x="110dp"
+            android:layout_y="160dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/home_node3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+
+            android:layout_x="130dp"
+            android:layout_y="90dp"
+            android:text="" />
+
+        </AbsoluteLayout >
 
     </LinearLayout>
 

@@ -90,10 +90,10 @@ public class HomeFragment extends Fragment {
                 }
                 // 시각화 업데이트
                 text_region.setText("동작구");
-                text_temper.setText(""+MainActivity.node1.getTemper());
-                text_dust.setText(""+MainActivity.node1.getDust());
-                text_ddust.setText(""+MainActivity.node1.getDdust());
-                text_humid.setText(""+MainActivity.node1.getHumid());
+                text_temper.setText(""+MainActivity.node1.getTemper() + "℃");
+                text_dust.setText(""+MainActivity.node1.getDust() + "㎍/m³");
+                text_ddust.setText(""+MainActivity.node1.getDdust() + "㎍/m³");
+                text_humid.setText(""+MainActivity.node1.getHumid() + "%");
                 text_time.setText(""+MainActivity.node1.getTime());
             }
         });
@@ -105,10 +105,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View arg0) {
                 text_region.setText("동작구");
-                text_temper.setText(""+MainActivity.node1.getTemper());
-                text_dust.setText(""+MainActivity.node1.getDust());
-                text_ddust.setText(""+MainActivity.node1.getDdust());
-                text_humid.setText(""+MainActivity.node1.getHumid());
+                text_temper.setText(""+MainActivity.node1.getTemper() + "℃");
+                text_dust.setText(""+MainActivity.node1.getDust()+ "㎍/m³");
+                text_ddust.setText(""+MainActivity.node1.getDdust()+ "㎍/m³");
+                text_humid.setText(""+MainActivity.node1.getHumid()+ "%");
                 text_time.setText(""+MainActivity.node1.getTime());
             }
         });
@@ -117,12 +117,24 @@ public class HomeFragment extends Fragment {
         home_node2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                text_region.setText("강동구");
-                text_temper.setText(""+MainActivity.node2.getTemper());
-                text_dust.setText(""+MainActivity.node2.getDust());
-                text_ddust.setText(""+MainActivity.node2.getDdust());
-                text_humid.setText(""+MainActivity.node2.getHumid());
+                text_region.setText("강남구");
+                text_temper.setText(""+MainActivity.node2.getTemper()+ "℃");
+                text_dust.setText(""+MainActivity.node2.getDust()+ "㎍/m³");
+                text_ddust.setText(""+MainActivity.node2.getDdust()+ "㎍/m³");
+                text_humid.setText(""+MainActivity.node2.getHumid()+ "%");
                 text_time.setText(""+MainActivity.node2.getTime());
+            }
+        });
+        Button home_node3= (Button) root.findViewById(R.id.home_node3);
+        home_node3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                text_region.setText("종로구");
+                text_temper.setText(""+MainActivity.node3.getTemper()+ "℃");
+                text_dust.setText(""+MainActivity.node3.getDust()+ "㎍/m³");
+                text_ddust.setText(""+MainActivity.node3.getDdust()+ "㎍/m³");
+                text_humid.setText(""+MainActivity.node3.getHumid() + "%");
+                text_time.setText(""+MainActivity.node3.getTime());
             }
         });
 
