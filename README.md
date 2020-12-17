@@ -18,7 +18,7 @@
     
     ![event2 2020-12-17 20-36](https://user-images.githubusercontent.com/55729930/102483137-a660a600-40a7-11eb-8190-91b6d5d4b024.gif)
     
-    * 이벤트 알림, 추가된 이벤트의 센서값이 설정한 임계치를 벗어날 시 push알림을 통해 알려준다.
+    * 이벤트 알림, 추가된 이벤트의 센서값이 설정한 임계영역 내에 해당될 시, push알림을 통해 알려준다.
     
     ![arlam 2020-12-17 19-28](https://user-images.githubusercontent.com/55729930/102477270-7d3c1780-409f-11eb-982a-22e1f31e1650.gif)
 
